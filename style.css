@@ -118,3 +118,66 @@ button{
 button:hover{
     background-color: var(--hover-color);
 }
+
+/* Extra small devices (phones, <400px) */
+@media (max-width: 400px) {
+  .game-board {
+    grid-template-columns: repeat(3, 50px);
+    grid-template-rows: repeat(3, 50px);
+  }
+
+  .cell {
+    width: 50px;
+    height: 50px;
+    font-size: 40px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+}
+
+/* Small phones and devices (<500px) */
+@media (max-width: 500px) {
+  .game-board {
+    grid-template-columns: repeat(3, 55px);
+    grid-template-rows: repeat(3, 55px);
+  }
+
+  .cell {
+    width: 55px;
+    height: 55px;
+    font-size: 45px;
+  }
+
+  button {
+    font-size: 15px;
+  }
+
+  .game-message {
+    font-size: 14px;
+  }
+}
+
+
+@media (max-width: 600px){
+    .game-board{
+        grid-template-columns: repeat(3, 60px);
+        grid-template-rows: repeat(3, 60px);
+    }
+
+    .cell{
+        width: 60px;
+        height: 60px;
+        font-size: 60px;
+    }
+
+    button{
+        font-size: 16px;
+    }
+}
