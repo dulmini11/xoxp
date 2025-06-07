@@ -82,3 +82,39 @@ h1{
 .cell:hover{
     background-color: #00000060;
 }
+
+.cell-0{
+    text-shadow: 0 0 10px var(--raspberry-red),0 0 20px var(--raspberry-red), 0 0 30px var(--raspberry-red);
+}
+
+.cell-X{
+    text-shadow: 0 0 10px var(--bright-blue),0 0 20px var(--bright-blue), 0 0 30px var(--bright-blue);
+}
+
+:is(.cell-0, .cell-X):hover{
+    background-color: #00000045;
+}
+
+.cell.correct{
+    background-color: var( #00000045);
+}
+
+.cell.correct:hover{
+    background-color: #00000096;
+}
+
+button{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    font-size: 20px;
+    margin: 40px auto 0;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover{
+    background-color: var(--hover-color);
+}
