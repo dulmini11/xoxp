@@ -21,163 +21,160 @@ body {
   min-height: 100vh;
   background: url(wal.jpeg)no-repeat;
   background-size: cover;
-  color: var(--white-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+          color: var(--white-color);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
 
-.container{
-    border: 2px solid var(--border-color);
-    padding: 40px;
-    border-radius: 10px;
-    backdrop-filter: blur (15px);
-    display: flex;
-    flex-direction: column;
-}
+        .container{
+            border: 2px solid var(--border-color);
+            padding: 40px;
+            border-radius: 10px;
+            backdrop-filter: blur(15px);
+            display: flex;
+            flex-direction: column;
+        }
 
-h1{
-    text-align: center;
-    margin-bottom: 20px;
-}
+        h1{
+            text-align: center;
+            margin-bottom: 20px;
+        }
 
-.current-player{
-    color: var(--primary-color);
-    font-size: 20px;
-    font-weight: 600;
-    height: 56px;
-}
+        .current-player{
+            color: var(--primary-color);
+            font-size: 20px;
+            font-weight: 600;
+            height: 56px;
+        }
 
-.current-player span{
-    color: var(--white-color);
-    background: var(--primary-color);
-    display: inline-flex;
-    width: 30px;
-    height: 30px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 3px;
-}
+        .current-player span{
+            color: var(--white-color);
+            background: var(--primary-color);
+            display: inline-flex;
+            width: 30px;
+            height: 30px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 3px;
+        }
 
-.game-board{
-    display: grid;
-    grid-template-columns: repeat(3,100px);
-    grid-template-rows: repeat(3,100px);
-    gap:10px;
-}
+        .game-board{
+            display: grid;
+            grid-template-columns: repeat(3,100px);
+            grid-template-rows: repeat(3,100px);
+            gap:10px;
+        }
 
-.cell{
-    font-size: 90px;
-    background-color: #00000045;
-    height: 100px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
+        .cell{
+            font-size: 90px;
+            background-color: #00000045;
+            height: 100px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
 
-.cell:hover{
-    background-color: #00000060;
-}
+        .cell:hover{
+            background-color: #00000060;
+        }
 
-.cell-0{
-    text-shadow: 0 0 10px var(--raspberry-red),0 0 20px var(--raspberry-red), 0 0 30px var(--raspberry-red);
-}
+        .cell-O{
+            text-shadow: 0 0 10px var(--raspberry-red),0 0 20px var(--raspberry-red), 0 0 30px var(--raspberry-red);
+        }
 
-.cell-X{
-    text-shadow: 0 0 10px var(--bright-blue),0 0 20px var(--bright-blue), 0 0 30px var(--bright-blue);
-}
+        .cell-X{
+            text-shadow: 0 0 10px var(--bright-blue),0 0 20px var(--bright-blue), 0 0 30px var(--bright-blue);
+        }
 
-:is(.cell-0, .cell-X):hover{
-    background-color: #00000045;
-}
+        :is(.cell-O, .cell-X):hover{
+            background-color: #00000045;
+        }
 
-.cell.correct{
-    background-color: var( #00000045);
-}
+        .cell.correct{
+            background-color: #00000045;
+        }
 
-.cell.correct:hover{
-    background-color: #00000096;
-}
+        .cell.correct:hover{
+            background-color: #00000096;
+        }
 
-button{
-    background-color: var(--primary-color);
-    color: var(--white-color);
-    font-size: 20px;
-    margin: 40px auto 0;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
+        button{
+            background-color: var(--primary-color);
+            color: var(--white-color);
+            font-size: 20px;
+            margin: 40px auto 0;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
 
-button:hover{
-    background-color: var(--hover-color);
-}
+        button:hover{
+            background-color: var(--hover-color);
+        }
 
-/* Extra small devices (phones, <400px) */
-@media (max-width: 400px) {
-  .game-board {
-    grid-template-columns: repeat(3, 50px);
-    grid-template-rows: repeat(3, 50px);
-  }
+        @media (max-width: 400px) {
+          .game-board {
+            grid-template-columns: repeat(3, 50px);
+            grid-template-rows: repeat(3, 50px);
+          }
 
-  .cell {
-    width: 50px;
-    height: 50px;
-    font-size: 40px;
-  }
+          .cell {
+            width: 50px;
+            height: 50px;
+            font-size: 40px;
+          }
 
-  button {
-    font-size: 14px;
-    padding: 6px 12px;
-  }
+          button {
+            font-size: 14px;
+            padding: 6px 12px;
+          }
 
-  h1 {
-    font-size: 20px;
-  }
-}
+          h1 {
+            font-size: 20px;
+          }
+        }
 
-/* Small phones and devices (<500px) */
-@media (max-width: 500px) {
-  .game-board {
-    grid-template-columns: repeat(3, 55px);
-    grid-template-rows: repeat(3, 55px);
-  }
+        @media (max-width: 500px) {
+          .game-board {
+            grid-template-columns: repeat(3, 55px);
+            grid-template-rows: repeat(3, 55px);
+          }
 
-  .cell {
-    width: 55px;
-    height: 55px;
-    font-size: 45px;
-  }
+          .cell {
+            width: 55px;
+            height: 55px;
+            font-size: 45px;
+          }
 
-  button {
-    font-size: 15px;
-  }
+          button {
+            font-size: 15px;
+          }
 
-  .game-message {
-    font-size: 14px;
-  }
-}
+          .game-message {
+            font-size: 14px;
+          }
+        }
 
+        @media (max-width: 600px){
+            .game-board{
+                grid-template-columns: repeat(3, 60px);
+                grid-template-rows: repeat(3, 60px);
+            }
 
-@media (max-width: 600px){
-    .game-board{
-        grid-template-columns: repeat(3, 60px);
-        grid-template-rows: repeat(3, 60px);
-    }
+            .cell{
+                width: 60px;
+                height: 60px;
+                font-size: 60px;
+            }
 
-    .cell{
-        width: 60px;
-        height: 60px;
-        font-size: 60px;
-    }
-
-    button{
-        font-size: 16px;
-    }
-}
+            button{
+                font-size: 16px;
+            }
+        }
