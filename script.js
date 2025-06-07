@@ -60,3 +60,16 @@ function checkWinner(){
     return false;
 }
 
+function checkTie() { 
+return Array.from(cells).every((cell)  => cell.innerHTML != ""); 
+} 
+
+function reset() {
+    gameStatus = EGameStatus.NOT_STARTED; 
+    currentPlayer = "X"; 
+    updateGameMessage(); 
+    cells.forEach( (cell) => { 
+    cell.innerText = ""; 
+    cell.className = "cell";
+    });
+    }
