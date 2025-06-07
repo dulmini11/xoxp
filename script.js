@@ -73,3 +73,18 @@ function reset() {
     cell.className = "cell";
     });
     }
+
+function updateGameMessage() { 
+  if (gameStatus === EGameStatus.FINISHED_WITH_TIE) { 
+    gameMessage.innerHTML = "It's a tie!"; 
+  } else if (gameStatus === EGameStatus.FINISHED_WITH_WINNER) { 
+    gameMessage.innerHTML = `Winner: <span>${currentPlayer}</span>`; 
+  } else { 
+    gameMessage.innerHTML = `Who's Turn: <span>${currentPlayer}</span>`; 
+  } 
+} 
+
+function isGameFinished() { 
+  return gameStatus === EGameStatus.FINISHED_WITH_TIE || 
+         gameStatus === EGameStatus.FINISHED_WITH_WINNER;
+}
