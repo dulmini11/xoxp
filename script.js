@@ -39,3 +39,24 @@ currentPlayer = currentPlayer === "X" ? "O" : "X";
 updateGameMessage();
 }
 
+function checkWinner(){
+    const winPatterns = [
+        [0,1,2],[3,4,5],[6,7,8],//row
+        [0,3,6],[1,4,7],[2,5,8],//colume
+        [0,4,8],[2,4,6],//diagonals
+    ];
+
+    for (const pattern of winPatterns) {
+        const[a,b,c] = pattern;
+        if(
+            cells[a].innerHTML !== "" &&
+            cells[a].innerHTML === cells[b].innerHTML &&
+            cells[a].innerHTML=== cells[c].innerHTML 
+        ){
+            updateCellsWinners (cells[a], cells[b],cells[c]);
+            return true;
+        }
+    }
+    return false;
+}
+
